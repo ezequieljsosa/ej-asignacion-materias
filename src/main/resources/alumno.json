@@ -1,0 +1,12 @@
+{
+  "nombre": "Pepe",
+  "apellido": "Lopez",
+  "ingreso": "2021-12-02",
+  "cursadas": [
+    {
+      "anio": 2019,
+      "cuatrimestr": 0,
+      "tipoMateria": "CUATRIMESTRAL"
+    }
+  ]
+}

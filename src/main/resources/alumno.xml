@@ -1,0 +1,12 @@
+<Alumno>
+    <nombre>Pepe</nombre>
+    <apellido>Lopez</apellido>
+    <ingreso>2021-12-02</ingreso>
+    <cursadas>
+        <cursadas>
+            <anio>2019</anio>
+            <cuatrimestr>0</cuatrimestr>
+            <tipoMateria>CUATRIMESTRAL</tipoMateria>
+        </cursadas>
+    </cursadas>
+</Alumno>

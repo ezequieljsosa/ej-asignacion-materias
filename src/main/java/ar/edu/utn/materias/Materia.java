@@ -8,9 +8,9 @@ public class Materia {
     private String descripcion;
     private List<Materia> correlativas;
 
-//    public Materia(){
-//
-//    }
+    public Materia(){
+
+    }
 
     public Materia(String nombre) {
         this.nombre = nombre;

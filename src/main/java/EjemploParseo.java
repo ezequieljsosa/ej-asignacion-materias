@@ -49,6 +49,7 @@ public class EjemploParseo {
         Alumno alumno1 = null;
         if(res.getString("format").equals("json")){
             ObjectMapper objectMapper = new ObjectMapper();
+
             JavaTimeModule javaTimeModule=new JavaTimeModule();
             // Hack time module to allow 'Z' at the end of string (i.e. javascript json's)
             javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_DATE_TIME));

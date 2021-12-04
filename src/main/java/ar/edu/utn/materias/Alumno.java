@@ -8,14 +8,16 @@ import java.util.Collection;
 
 public class Alumno {
 
+
     private String nombre;
     private String apellido;
 
     private LocalDate ingreso;
     private Collection<Curso> cursadas;
+    private Collection<Acta> actas;
 
-//    public Alumno() {
-//    }
+    public Alumno() {
+    }
 
     public Alumno(String nombre, String apellido, LocalDate ingreso) {
         this.nombre = nombre;
@@ -53,8 +55,14 @@ public class Alumno {
     }
 
     public void anotarEn(Curso curso){
+        //TODO Validar que se puede anotar
         this.cursadas.add(curso);
     }
 
+
+    public void registrarActa(Acta acta){
+        //TODO Validar que se puede anotar
+        this.actas.add(acta);
+    }
 
 }

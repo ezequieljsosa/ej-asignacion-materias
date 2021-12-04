@@ -34,7 +34,6 @@ public class EjemploSerializacion {
                 .type(String.class).choices("json", "xml").setDefault("json")
                 .help("formato");
 
-
         Namespace res = null;
         try {
             res = parser.parseArgs(args);
@@ -50,15 +49,15 @@ public class EjemploSerializacion {
         materia.setDescripcion("Materia que enseña a programar");
         Curso curso = new Curso(materia,2019, TipoMateria.CUATRIMESTRAL);
         alumno.anotarEn(curso);
-
+        log.debug("Alumno creado...");
         String json = "";
         if(res.getString("format").equals("json")){
             ObjectMapper objectMapper = new ObjectMapper();
             JavaTimeModule javaTimeModule=new JavaTimeModule();
-            // Hack time module to allow 'Z' at the end of string (i.e. javascript json's)
             javaTimeModule.addDeserializer(LocalDateTime.class, new LocalDateTimeDeserializer(DateTimeFormatter.ISO_DATE_TIME));
             objectMapper.registerModule(javaTimeModule);
             objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+            log.debug("tratando de serializa alumno...");
             json = objectMapper.writeValueAsString(alumno);
         }
         if(res.getString("format").equals("xml")){

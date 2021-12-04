@@ -7,9 +7,9 @@ public class Curso {
     private int cuatrimestr;
     private TipoMateria tipoMateria;
 
-//    public Curso(){
-//
-//    }
+    public Curso(){
+
+    }
 
     public Curso(Materia materia, int anio, TipoMateria tipoMateria) {
         this.materia = materia;
